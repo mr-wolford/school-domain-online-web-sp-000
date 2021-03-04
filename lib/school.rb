@@ -18,14 +18,12 @@ def grade(grade)
 end
 
 def sort
-  @roster.each do |k, v|
-    k.sort
-    v.sort
+  sorted = {}
+  roster.each do |grade, students|
+    sorted[grade] = students.sort
   end
-  @roster
+  sorted
 end
-
-# I need to access the value of each key, sort it, and return the entire hash with the sorted values
 
 end
 
